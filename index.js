@@ -16,10 +16,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 const db = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE
+    host: "195.179.238.1",
+    user: "u611292494_ivan",
+    password: "Css9393$$$",
+    database: "u611292494_iastest"
   });
 
   app.get("/",(req,res)=>{
