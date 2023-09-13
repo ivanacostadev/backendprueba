@@ -9,11 +9,12 @@ ejecutar desde consola en un directorio nuevo:
 una vez clonado:
 # cd backendprueba 
 
-ya en el directorio backendprueba 
-#npm install 
+ya en el directorio backendprueba:
+
+# npm install 
 
 Cuando se tengan todas las librerias necesarias 
-#npm run server
+# npm run server
 
 
 
