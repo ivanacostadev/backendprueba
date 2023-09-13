@@ -1,6 +1,6 @@
 # backendprueba
 Server para Endpoints 
-
+En el aechivo index.js ya esta configurada la base datos de mi hosting personal para podr hcer pruebas de inmediato.
 Manual de uso e instalacion.
 
 ejecutar desde consola en un directorio nuevo:
