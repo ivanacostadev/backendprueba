@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extend: true }));
 
 const corsOptions = {
-    origin: 'http://localhost:3000', // Cambia esto según tu origen de cliente
+    origin: 'http://localhost:3000', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   };
   
@@ -62,7 +62,7 @@ const db = mysql.createPool({
   app.post("/login", (req, res) => {
     const { email, password } = req.body;
   
-    // Realiza una consulta SQL para verificar la autenticación
+
     const sql = "SELECT * FROM tbl_Users WHERE st_Email = ? AND st_Password = ?";
     db.query(sql, [email, password], (err, results) => {
       if (err) {
@@ -71,12 +71,12 @@ const db = mysql.createPool({
       } else {
 
         if (results.length > 0) {
-          // Usuario autenticado con éxito
+ 
           const usuario = results[0];
           res.send(usuario)
           console.log(usuario)
         } else {
-          // Usuario no encontrado o contraseña incorrecta
+        
           res.status(401).json({ error: "Credenciales inválidas" });
         }
       }
@@ -92,12 +92,12 @@ const db = mysql.createPool({
       } else {
 
         if (results.length > 0) {
-          // Usuario autenticado con éxito
+     
           const posts = results;
           res.send(posts)
           console.log(posts)
         } else {
-          // Usuario no encontrado o contraseña incorrecta
+     
           res.status(401).json({ error: "Credenciales inválidas" });
         }
       }
@@ -116,12 +116,12 @@ const db = mysql.createPool({
       } else {
 
         if (results.length > 0) {
-          // Usuario autenticado con éxito
+
           const posts = results;
           res.send(posts)
           console.log(posts)
         } else {
-          // Usuario no encontrado o contraseña incorrecta
+
           res.status(401).json({ error: "Credenciales inválidas" });
         }
       }
@@ -140,12 +140,12 @@ const db = mysql.createPool({
       } else {
 
         if (results.length > 0) {
-          // Usuario autenticado con éxito
+ 
           const posts = results;
           res.send(posts)
           console.log(posts)
         } else {
-          // Usuario no encontrado o contraseña incorrecta
+        
           res.status(401).json({ error: "Credenciales inválidas" });
         }
       }
@@ -163,12 +163,12 @@ const db = mysql.createPool({
       } else {
 
         if (results.length > 0) {
-          // Usuario autenticado con éxito
+ 
           const posts = results;
           res.send(posts)
           console.log(posts)
         } else {
-          // Usuario no encontrado o contraseña incorrecta
+        
           res.status(401).json({ error: "Credenciales inválidas" });
         }
       }
@@ -189,12 +189,12 @@ const db = mysql.createPool({
         res.status(500).json({ error: "Error en el servidor" });
       } else {
         if (results.length > 0) {
-          // Usuario autenticado con éxito
+ 
           const posts = results;
           res.send(posts);
           console.log(posts);
         } else {
-          // Usuario no encontrado o contraseña incorrecta
+        
           res.status(401).json({ error: "Credenciales inválidas" });
         }
       }
